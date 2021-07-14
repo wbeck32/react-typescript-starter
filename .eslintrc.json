@@ -17,7 +17,7 @@
   ],
   "parserOptions": {
     "project": [
-      "tsconfig.json"
+      "./tsconfig.eslint.json"
     ],
     "ecmaVersion": 2020,
     "sourceType": "module",
