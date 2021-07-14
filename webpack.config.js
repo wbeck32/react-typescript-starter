@@ -17,7 +17,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var path_1 = __importDefault(require("path"));
 var webpack_1 = __importDefault(require("webpack"));
 var html_webpack_plugin_1 = __importDefault(require("html-webpack-plugin"));
-var fork_ts_checker_webpack_plugin_1 = __importDefault(require("fork-ts-checker-webpack-plugin"));
 var tsconfig_paths_webpack_plugin_1 = require("tsconfig-paths-webpack-plugin");
 var webpackConfig = function (env) { return (__assign(__assign({ entry: "./src/index.tsx" }, (env.production || !env.development ? {} : { devtool: "eval-source-map" })), { resolve: {
         extensions: [".ts", ".tsx", ".js"],
@@ -45,11 +44,6 @@ var webpackConfig = function (env) { return (__assign(__assign({ entry: "./src/i
             "process.env.NAME": JSON.stringify(require("./package.json").name),
             "process.env.VERSION": JSON.stringify(require("./package.json").version)
         }),
-        new fork_ts_checker_webpack_plugin_1.default({
-            eslint: {
-                files: "./src/**/*.{ts,tsx,js,jsx}"
-            }
-        })
     ] })); };
 exports.default = webpackConfig;
 //# sourceMappingURL=webpack.config.js.map
