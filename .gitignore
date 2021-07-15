@@ -4,5 +4,5 @@ dist/
 .idea/
 yarn.lock
 lib/
-.vscode
+.vscode/
 storybook-static/
