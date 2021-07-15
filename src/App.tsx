@@ -1,6 +1,6 @@
 import React from "react";
-import HelloWorld from "components/HelloWorld";
+import Container from "./components/Container";
 
-const App: React.FC = () => <HelloWorld />;
+const App: React.FC = () => <Container title="React with Typescript starter app" />;
 
 export default App;
