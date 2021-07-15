@@ -4,8 +4,7 @@ type HeaderProps = {
 	message: string;
 };
 
-const Header: FunctionComponent<HeaderProps> = (props: Record<string, unknown>) => {
-	const {message} = props;
+const Header: FunctionComponent<HeaderProps> = ({message}) => {
 	return <header>{message}</header>;
 };
 

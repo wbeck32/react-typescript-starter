@@ -3,11 +3,9 @@ import Header from "./Header";
 
 type ContainerProps = {
 	title: string;
-	message: string;
 };
 
-const Container: FunctionComponent<ContainerProps> = (props: Record<string, unknown>) => {
-	const {title} = props;
+const Container: FunctionComponent<ContainerProps> = ({title}) => {
 	return (
 		<div>
 			<Header message={title} />
