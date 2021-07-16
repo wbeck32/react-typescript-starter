@@ -1,11 +1,16 @@
 import React, {FunctionComponent} from "react";
 
 type MainProps = {
-	title: string;
-};
+}
 
-const Main: FunctionComponent<MainProps> = ({title}) => {
-	return <>{title}</>;
+
+const Main: FunctionComponent<MainProps> = () => {
+
+	return (
+		<div>
+Main!
+		</div>
+	);
 };
 
 export default Main;

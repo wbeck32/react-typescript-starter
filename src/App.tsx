@@ -5,7 +5,7 @@ import theme from "./theme";
 
 
 const App: FunctionComponent = () => {
-	return <ThemeProvider theme={theme}><Container title="React with Typescript starter app" /></ThemeProvider>;
+	return <ThemeProvider theme={theme}><Container title="hello chum!" /></ThemeProvider>;
 };
 
 export default App;
