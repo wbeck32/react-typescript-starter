@@ -2,10 +2,12 @@ import path from "path";
 import webpack, {Configuration} from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import {TsconfigPathsPlugin} from "tsconfig-paths-webpack-plugin";
+const createStyledComponentsTransformer = require('typescript-plugin-styled-components').default;
+const styledComponentsTransformer = createStyledComponentsTransformer();
 
-const webpackConfig = (env): Configuration => ({
+
+const webpackConfig = ({
 	entry: path.join(__dirname,"/src/index.tsx"),
-	...(env.production || !env.development ? {} : {devtool: "eval-source-map"}),
 	resolve: {
 		extensions: [".ts", ".tsx", ".js"],
 		fallback:{"http":false},
@@ -23,7 +25,9 @@ const webpackConfig = (env): Configuration => ({
 				options: {
 					logInfoToStdOut:true,
 					logLevel:"info",
-					transpileOnly: true
+					transpileOnly: true,
+					getCustomTransformers: () => ({ before: [styledComponentsTransformer] })
+
 				},
 				exclude: [/dist/,/node_modules/]
 			},

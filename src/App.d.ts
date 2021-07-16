@@ -1,3 +1,3 @@
-import React from "react";
-declare const App: React.FC;
+import { FunctionComponent } from "react";
+declare const App: FunctionComponent;
 export default App;

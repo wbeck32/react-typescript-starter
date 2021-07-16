@@ -11,7 +11,7 @@ var Container = function (_a) {
     var title = _a.title;
     return (react_1.default.createElement("div", null,
         react_1.default.createElement(Header_1.default, { message: title }),
-        react_1.default.createElement(Main_1.default, { title: "main" }),
+        react_1.default.createElement(Main_1.default, null),
         react_1.default.createElement(Footer_1.default, { message: "I am the footer" })));
 };
 exports.default = Container;
