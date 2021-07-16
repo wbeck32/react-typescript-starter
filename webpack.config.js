@@ -18,9 +18,10 @@ var path_1 = __importDefault(require("path"));
 var webpack_1 = __importDefault(require("webpack"));
 var html_webpack_plugin_1 = __importDefault(require("html-webpack-plugin"));
 var tsconfig_paths_webpack_plugin_1 = require("tsconfig-paths-webpack-plugin");
-var webpackConfig = function (env) { return (__assign(__assign({ entry: "./src/index.tsx" }, (env.production || !env.development ? {} : { devtool: "eval-source-map" })), { resolve: {
+var webpackConfig = function (env) { return (__assign(__assign({ entry: path_1.default.join(__dirname, "/src/index.tsx") }, (env.production || !env.development ? {} : { devtool: "eval-source-map" })), { resolve: {
         extensions: [".ts", ".tsx", ".js"],
-        plugins: [new tsconfig_paths_webpack_plugin_1.TsconfigPathsPlugin()]
+        fallback: { "http": false },
+        plugins: [new tsconfig_paths_webpack_plugin_1.TsconfigPathsPlugin({})]
     }, output: {
         path: path_1.default.join(__dirname, "/dist"),
         filename: "build.js"
@@ -30,14 +31,32 @@ var webpackConfig = function (env) { return (__assign(__assign({ entry: "./src/i
                 test: /\.tsx?$/,
                 loader: "ts-loader",
                 options: {
+                    logInfoToStdOut: true,
+                    logLevel: "info",
                     transpileOnly: true
                 },
-                exclude: /dist/
+                exclude: [/dist/, /node_modules/]
+            },
+            {
+                test: /\.css$/,
+                loader: '@teamsupercell/typings-for-css-modules-loader',
+                options: {
+                    modules: true
+                }
+            },
+            {
+                test: /\.scss$/,
+                loader: '@teamsupercell/typings-for-css-modules-loader',
+                options: {
+                    modules: true
+                }
             }
         ]
+    }, devServer: {
+        hot: true,
     }, plugins: [
         new html_webpack_plugin_1.default({
-            template: "./public/index.html"
+            template: path_1.default.join(__dirname, "/public/index.html")
         }),
         new webpack_1.default.DefinePlugin({
             "process.env.PRODUCTION": env.production || !env.development,

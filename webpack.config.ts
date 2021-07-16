@@ -2,7 +2,6 @@ import path from "path";
 import webpack, {Configuration} from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import {TsconfigPathsPlugin} from "tsconfig-paths-webpack-plugin";
-import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 
 const webpackConfig = (env): Configuration => ({
 	entry: path.join(__dirname,"/src/index.tsx"),
@@ -10,6 +9,7 @@ const webpackConfig = (env): Configuration => ({
 	resolve: {
 		extensions: [".ts", ".tsx", ".js"],
 		fallback:{"http":false},
+		plugins: [new TsconfigPathsPlugin({})]
 	},
 	output: {
 		path: path.join(__dirname, "/dist"),
@@ -29,23 +29,24 @@ const webpackConfig = (env): Configuration => ({
 			},
 			{ 
 				test: /\.css$/, 
-				loader: 'typings-for-css-modules-loader?modules&namedExport&camelCase' 
+				loader: '@teamsupercell/typings-for-css-modules-loader',
+				options:{
+					modules:true
+				}
 			},
 			{ 
 				test: /\.scss$/, 
-				loader: 'typings-for-css-modules-loader?modules&sass'
+				loader: '@teamsupercell/typings-for-css-modules-loader',
+				options:{
+					modules:true
+				}
 			}
 		]
 	},
-	stats:{
-		logging:"none",
-		modules:false,
-		context:"/src/",
-		excludeModules:"/node_modules/",
-		outputPath:true,
+	devServer:{
+		hot:true,
 	},
 	plugins: [
-		new ForkTsCheckerWebpackPlugin({}),
 		new HtmlWebpackPlugin({
 			template: path.join(__dirname,"/public/index.html")
 		}),

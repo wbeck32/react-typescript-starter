@@ -4,9 +4,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __importDefault(require("react"));
-var Container_1 = __importDefault(require("./components/Container"));
-var App = function () {
-    return react_1.default.createElement(Container_1.default, { title: "React with Typescript starter app" });
+var Footer = function (_a) {
+    var message = _a.message;
+    return react_1.default.createElement("div", null, message);
 };
-exports.default = App;
-//# sourceMappingURL=App.js.map
+exports.default = Footer;
+//# sourceMappingURL=Footer.js.map

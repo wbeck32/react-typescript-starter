@@ -7,14 +7,15 @@
 	"license": "MIT",
 	"private": false,
 	"scripts": {
-		"start:dev": "webpack-cli serve --mode=development --env development --open --hot",
-		"build:dev": "webpack-cli --mode=development --env development --progress --json=./src/compilation-stats-log.json",
+		"start:dev": "webpack-cli serve --mode=development --env development",
+		"build:dev": "webpack-cli --mode=development --env development --progress",
 		"build": "webpack --mode=production --env production --progress",
 		"lint": "eslint './src/**/*.{ts,tsx}'",
 		"lint:fix": "eslint './src/**/*.{ts,tsx}' --fix"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.14.6",
+		"@teamsupercell/typings-for-css-modules-loader": "^2.5.1",
 		"@types/node": "13.13.52",
 		"@types/react": "17.0.14",
 		"@types/react-dom": "17.0.9",
@@ -28,7 +29,6 @@
 		"eslint-plugin-import": "2.23.4",
 		"eslint-plugin-react": "7.24.0",
 		"eslint-plugin-react-hooks": "4.2.0",
-		"fork-ts-checker-webpack-plugin": "^6.2.12",
 		"html-webpack-plugin": "^5.3.2",
 		"style-loader": "^3.1.0",
 		"ts-loader": "8.3.0",
@@ -38,8 +38,7 @@
 		"typings-for-css-modules-loader": "^1.7.0",
 		"webpack": "5.28.0",
 		"webpack-cli": "^4.7.2",
-		"webpack-dev-server": "3.11.2",
-		"webpack-logger-plugin": "^1.2.0"
+		"webpack-dev-server": "3.11.2"
 	},
 	"dependencies": {
 		"react": "^17.0.0",
