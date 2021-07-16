@@ -6,6 +6,7 @@ import Footer from "./Footer";
 
 type ContainerProps = {
 	title: string;
+	theme:obj
 };
 
 const Container: FunctionComponent<ContainerProps> = ({title}) => {
