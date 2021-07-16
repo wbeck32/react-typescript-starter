@@ -1,4 +1,4 @@
-const path =  require("path");
+import path from 'path'
 import webpack, {Configuration} from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import {TsconfigPathsPlugin} from "tsconfig-paths-webpack-plugin";
@@ -12,7 +12,10 @@ const webpackConfig = env => ({
 	resolve: {
 		extensions: [".ts", ".tsx", ".js"],
 		fallback:{"http":false},
-		plugins: [new TsconfigPathsPlugin({})]
+		plugins: [new TsconfigPathsPlugin({
+			logLevel:"INFO",
+			logInfoToStdOut:true
+		})]
 	},
 	output: {
 		path: path.join(__dirname, "/dist"),
@@ -27,7 +30,7 @@ const webpackConfig = env => ({
 					logInfoToStdOut:true,
 					logLevel:"info",
 					transpileOnly: true,
-					getCustomTransformers: () => ({ before: [styledComponentsTransformer] })
+					getCustomTransformers: () => ({ before: [styledComponentsTransformer]})
 					
 				},
 				exclude: [/dist/,/node_modules/]
@@ -50,7 +53,8 @@ const webpackConfig = env => ({
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: path.join(__dirname,"/public/index.html")
+			filename: path.join(__dirname,"/public/index.html"),
+			hash:true
 		}),
 		new webpack.DefinePlugin({
 			"process.env.PRODUCTION": env.production || !env.development,

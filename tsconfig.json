@@ -12,6 +12,11 @@
 			"dom",
 			"dom.iterable"
 		],
+		"plugins": [
+			{
+				"transform": "typescript-plugin-styled-components"
+			},
+		],
 		"module": "commonjs",
 		"moduleResolution": "node",
 		"noImplicitAny": false,

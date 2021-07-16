@@ -2,7 +2,7 @@ import webpack from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import { TsconfigPathsPlugin } from "tsconfig-paths-webpack-plugin";
 declare const webpackConfig: (env: any) => {
-    entry: any;
+    entry: string;
     resolve: {
         extensions: string[];
         fallback: {
@@ -11,7 +11,7 @@ declare const webpackConfig: (env: any) => {
         plugins: TsconfigPathsPlugin[];
     };
     output: {
-        path: any;
+        path: string;
         filename: string;
     };
     module: {

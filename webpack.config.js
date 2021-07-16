@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const path = require("path");
+const path_1 = __importDefault(require("path"));
 const webpack_1 = __importDefault(require("webpack"));
 const html_webpack_plugin_1 = __importDefault(require("html-webpack-plugin"));
 const tsconfig_paths_webpack_plugin_1 = require("tsconfig-paths-webpack-plugin");
@@ -11,14 +11,17 @@ const createStyledComponentsTransformer = require('typescript-plugin-styled-comp
 const styledComponentsTransformer = createStyledComponentsTransformer();
 const webpackConfig = env => ({
     ...(env.production || !env.development ? {} : { devtool: "eval-source-map" }),
-    entry: path.join(__dirname, "/src/index.tsx"),
+    entry: path_1.default.join(__dirname, "/src/index.tsx"),
     resolve: {
         extensions: [".ts", ".tsx", ".js"],
         fallback: { "http": false },
-        plugins: [new tsconfig_paths_webpack_plugin_1.TsconfigPathsPlugin({})]
+        plugins: [new tsconfig_paths_webpack_plugin_1.TsconfigPathsPlugin({
+                logLevel: "INFO",
+                logInfoToStdOut: true
+            })]
     },
     output: {
-        path: path.join(__dirname, "/dist"),
+        path: path_1.default.join(__dirname, "/dist"),
         filename: "build.js"
     },
     module: {
@@ -52,7 +55,8 @@ const webpackConfig = env => ({
     },
     plugins: [
         new html_webpack_plugin_1.default({
-            template: path.join(__dirname, "/public/index.html")
+            filename: path_1.default.join(__dirname, "/public/index.html"),
+            hash: true
         }),
         new webpack_1.default.DefinePlugin({
             "process.env.PRODUCTION": env.production || !env.development,
