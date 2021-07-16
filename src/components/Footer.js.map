@@ -1,1 +1,1 @@
-{"version":3,"file":"Footer.js","sourceRoot":"","sources":["Footer.tsx"],"names":[],"mappings":";;;;;AAAA,gDAA+C;AAM/C,IAAM,MAAM,GAAmC,UAAC,EAAS;QAAR,OAAO,aAAA;IACvD,OAAO,2CAAM,OAAO,CAAO,CAAC;AAC7B,CAAC,CAAC;AAEF,kBAAe,MAAM,CAAC"}
+{"version":3,"file":"Footer.js","sourceRoot":"","sources":["Footer.tsx"],"names":[],"mappings":";;;;;AAAA,kDAA+C;AAM/C,MAAM,MAAM,GAAmC,CAAC,EAAC,OAAO,EAAC,EAAE,EAAE;IAC5D,OAAO,2CAAM,OAAO,CAAO,CAAC;AAC7B,CAAC,CAAC;AAEF,kBAAe,MAAM,CAAC"}
