@@ -55,7 +55,7 @@ const webpackConfig = env => ({
     },
     plugins: [
         new html_webpack_plugin_1.default({
-            filename: path_1.default.join(__dirname, "/public/index.html"),
+            template: path_1.default.join(__dirname, "/public/index.html"),
             hash: true
         }),
         new webpack_1.default.DefinePlugin({
