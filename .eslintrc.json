@@ -17,6 +17,7 @@
 	],
 	"parserOptions": {
 		"tsconfigRootDir": ".",
+		"extraFileExtensions":[".json"],
 		"project": [
 			"./tsconfig.eslint.json"
 		],

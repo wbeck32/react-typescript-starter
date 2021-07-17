@@ -12,11 +12,6 @@
 			"dom",
 			"dom.iterable"
 		],
-		"plugins": [
-			{
-				"transform": "typescript-plugin-styled-components"
-			},
-		],
 		"module": "commonjs",
 		"moduleResolution": "node",
 		"noImplicitAny": false,
@@ -25,14 +20,22 @@
 				"./src/components/*"
 			]
 		},
+		"plugins": [
+			{
+				"transform": "typescript-plugin-styled-components"
+			}
+		],
 		"removeComments": true,
 		"resolveJsonModule": true,
 		"sourceMap": true,
 		"target": "esnext"
 	},
+	"exclude": [
+		"./dist",
+		"./node_modules"
+	],
 	"include": [
 		"./src",
 		"./webpack.config.ts"
-	],
-	"exclude": ["./dist","./node_modules"]
+	]
 }
