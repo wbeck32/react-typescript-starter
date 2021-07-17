@@ -1,22 +1,22 @@
-declare namespace _default {
-    const layout: {};
-    const typography: {};
-    const flexbox: {};
-    const grid: {};
-    const border: {};
-    const background: {};
-    const position: {};
-    namespace color {
-        namespace colors {
-            const black: string;
-            const buttonBlue: string;
-            const buttonGreen: string;
-            const darkLink: string;
-            const darkMagenta: string;
-            const lightLink: string;
-            const lightMagenta: string;
-            const white: string;
-        }
-    }
-}
+declare const _default: {
+    layout: {};
+    typography: {};
+    flexbox: {};
+    grid: {};
+    border: {};
+    background: {};
+    position: {};
+    color: {
+        colors: {
+            black: string;
+            buttonBlue: string;
+            buttonGreen: string;
+            darkLink: string;
+            darkMagenta: string;
+            lightLink: string;
+            lightMagenta: string;
+            white: string;
+        };
+    };
+};
 export default _default;

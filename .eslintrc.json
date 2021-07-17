@@ -18,9 +18,7 @@
 	"parserOptions": {
 		"tsconfigRootDir": ".",
 		"extraFileExtensions":[".json"],
-		"project": [
-			"./tsconfig.eslint.json"
-		],
+		"project": "./tsconfig.json",
 		"ecmaVersion": 2020,
 		"sourceType": "module",
 		"ecmaFeatures": {
@@ -106,8 +104,8 @@
 		"max-classes-per-file": 1,
 		"max-depth": 1,
 		"max-len": 0,
-		"max-lines": 1,
-		"max-lines-per-function": 1,
+		"max-lines": 0,
+		"max-lines-per-function": 0,
 		"max-nested-callbacks": 1,
 		"max-params": 1,
 		"max-statements": 1,
@@ -232,7 +230,7 @@
 		"no-sync": 1,
 		"no-tabs": 0,
 		"no-template-curly-in-string": 1,
-		"no-ternary": 1,
+		"no-ternary": 0,
 		"no-this-before-super": 1,
 		"no-throw-literal": 1,
 		"no-trailing-spaces": 1,
