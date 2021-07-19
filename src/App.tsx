@@ -5,7 +5,7 @@ import theme from "./theme";
 
 
 const App: FunctionComponent = () => {
-	return <ThemeProvider theme={theme}><Container text="app" message="message"/></ThemeProvider>;
+	return <ThemeProvider theme={theme}><Container textString="app" message="message"/></ThemeProvider>;
 };
 
 export default App;
