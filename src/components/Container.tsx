@@ -1,14 +1,25 @@
 import React, {FunctionComponent} from "react";
+import Header from "./Header";
+import Main from "./Main";
+import Footer from "./Footer";
 
 export interface ContainerProps {
-	message:string;
-	text:string;
+	textString:string;
+	message:string
 }
 
-const Container: FunctionComponent<ContainerProps> = ({text, message}) => {
+const Container:FunctionComponent<ContainerProps> = () => {
 	return (
-		<div text="prop" message="message">
-			{text}{message}
+		<div>
+			-----
+
+			<Header textString="headerText" message="lookAtMyHeader!"/>
+			-----
+
+			<Main textString="mainText" message="lookAtMyMain!"/>
+			-----
+
+			<Footer textString="footerText" message="lookAtMyFooter!"/>
 			-----
 		</div>
 	);

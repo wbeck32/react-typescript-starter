@@ -1,13 +1,12 @@
 import React, {FunctionComponent} from "react";
-import Container from "./Container";
-import styled from "styled-components";
 
 export interface HeaderProps {
 	message: string;
+	textString:string
 }
 
-const Header: FunctionComponent<HeaderProps> = ({message}) => {
-	return <header>{message}</header>;
+const Header: FunctionComponent<HeaderProps> = ({textString, message}) => {
+	return <header>{message}{textString}</header>;
 };
 
 export default Header;

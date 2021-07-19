@@ -1,14 +1,15 @@
 import React, {FunctionComponent} from "react";
 
 type MainProps = {
-	message:string
+	message:string;
+	textString:string
 }
 
-const Main: FunctionComponent<MainProps> = ({message}) => {
+const Main: FunctionComponent<MainProps> = ({message, textString}) => {
 
 	return (
 		<div>
-			{message}
+			{message} {textString}
 
 		</div>
 	);
