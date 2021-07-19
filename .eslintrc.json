@@ -297,7 +297,7 @@
 		"require-atomic-updates": 1,
 		"require-await": 1,
 		"require-jsdoc": 1,
-		"require-unicode-regexp": 1,
+		"require-unicode-regexp": 0,
 		"require-yield": 1,
 		"rest-spread-spacing": 1,
 		"semi": 1,

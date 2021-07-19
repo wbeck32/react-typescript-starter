@@ -1,11 +1,11 @@
 import React, {FunctionComponent} from "react";
-import Container from "./components/Container";
+import Page from "./components/Page";
 import {ThemeProvider} from "styled-components";
 import theme from "./theme";
 
 
 const App: FunctionComponent = () => {
-	return <ThemeProvider theme={theme}><Container title="hello chum!" /></ThemeProvider>;
+	return <ThemeProvider theme={theme}><Page /></ThemeProvider>;
 };
 
 export default App;
