@@ -1,4 +1,5 @@
 import React, {FunctionComponent} from "react";
+import Box from "./Box";
 
 type MainProps = {
 	message:string;
@@ -10,7 +11,7 @@ const Main: FunctionComponent<MainProps> = ({message, textString}) => {
 	return (
 		<div>
 			{message} {textString}
-
+			<Box/>
 		</div>
 	);
 };
