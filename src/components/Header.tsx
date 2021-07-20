@@ -6,7 +6,7 @@ export interface HeaderProps {
 }
 
 const Header: FunctionComponent<HeaderProps> = ({textString, message}) => {
-	return <header>{message}{textString}</header>;
+	return <header>{message} {textString}</header>;
 };
 
 export default Header;
