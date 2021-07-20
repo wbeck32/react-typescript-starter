@@ -98,7 +98,6 @@ export default {
 
 	},
 	"color": {
-		// opacity
 		"colors": {
 			"plum": "#650360",
 			"buttonBlue": "#0071c4",

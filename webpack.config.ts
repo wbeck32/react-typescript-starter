@@ -2,22 +2,24 @@ import path from "path";
 import webpack from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import {TsconfigPathsPlugin} from "tsconfig-paths-webpack-plugin";
-const createStyledComponentsTransformer = require("typescript-plugin-styled-components").default;
+import createStyledComponentsTransformer from "typescript-plugin-styled-components";
 const styledComponentsTransformer = createStyledComponentsTransformer();
 
 
-const webpackConfig = (env) => {
+const webpackConfig = () => {
 	return {
-		...env.production || !env.development
-			? {}
-			: {"devtool": "eval-source-map"},
-		"entry": path.join(__dirname, "/src/index.tsx"),
+
+		/*
+		 * ...env.production || !env.development
+		 * 	? {}
+		 * 	: {"devtool": "eval-source-map"},
+		 */
+		"entry": {
+			"code": "/src/index.tsx",
+			"styles": "/src/App.css"
+		},
 		"resolve": {
-			"extensions": [
-				".ts",
-				".tsx",
-				".js"
-			],
+			"extensions": [".ts", ".tsx", ".js", ".css"],
 			"fallback": {"http": false},
 			"plugins": [
 				new TsconfigPathsPlugin({
@@ -28,7 +30,8 @@ const webpackConfig = (env) => {
 		},
 		"output": {
 			"path": path.join(__dirname, "/dist"),
-			"filename": "build.js"
+			"filename": "[name].js",
+			"clean": true
 		},
 		"module": {
 			"rules": [
@@ -42,26 +45,15 @@ const webpackConfig = (env) => {
 						"getCustomTransformers": () => {
 							return {"before": [styledComponentsTransformer]};
 						}
-
-					},
-					"exclude": [
-						/dist/,
-						/node_modules/
+					}
+				}, {
+					"test": /\.css$/i,
+					"use": [
+						"style-loader", "@teamsupercell/typings-for-css-modules-loader", {"loader": "css-loader",
+							"options": {
+								"modules": true
+							}}
 					]
-				},
-				{
-					"test": /\.css$/,
-					"loader": "@teamsupercell/typings-for-css-modules-loader",
-					"options": {
-						"modules": true
-					}
-				},
-				{
-					"test": /\.scss$/,
-					"loader": "@teamsupercell/typings-for-css-modules-loader",
-					"options": {
-						"modules": true
-					}
 				}
 			]
 		},
@@ -69,11 +61,8 @@ const webpackConfig = (env) => {
 			new HtmlWebpackPlugin({
 				"template": path.join(__dirname, "/public/index.html"),
 				"hash": true
-			}),
-			new webpack.DefinePlugin({
-				"process.env.PRODUCTION": env.production || !env.development,
-				"process.env.NAME": JSON.stringify(require("./package.json").name),
-				"process.env.VERSION": JSON.stringify(require("./package.json").version)
+			}), new webpack.DefinePlugin({
+				// "process.env.PRODUCTION": env.production || !env.development
 			})
 		]
 	};

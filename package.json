@@ -8,6 +8,7 @@
 	"private": false,
 	"scripts": {
 		"start:dev": "webpack-cli serve --mode=development --env development --hot",
+		"validate":"webpack configtest ./webpack.config.ts",
     "build": "webpack --mode=production --env production --progress",
     "lint": "eslint './src/**/*.{ts,tsx,json}'",
     "lint:fix": "eslint './src/**/*.{ts,tsx,json}' --fix"
