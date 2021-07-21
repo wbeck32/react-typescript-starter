@@ -30,7 +30,7 @@ const webpackConfig = () => {
 		},
 		"output": {
 			"path": path.join(__dirname, "./dist"),
-			"filename": "build.js",
+			"filename": "[name].js",
 			"clean": true
 		},
 		"module": {

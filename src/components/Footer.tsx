@@ -6,7 +6,7 @@ export interface FooterProps {
 }
 
 const Footer: FunctionComponent<FooterProps> = ({textString, message}) => {
-	return <div>{message} {textString}</div>;
+	return <div className="someClass">{message} {textString}</div>;
 };
 
 export default Footer;

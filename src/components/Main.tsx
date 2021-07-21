@@ -9,7 +9,7 @@ type MainProps = {
 const Main: FunctionComponent<MainProps> = ({message, textString}) => {
 
 	return (
-		<div>
+		<div className="some-class">
 			{message} {textString}
 			<Box/>
 		</div>
