@@ -4,6 +4,7 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import {TsconfigPathsPlugin} from "tsconfig-paths-webpack-plugin";
 import createStyledComponentsTransformer from "typescript-plugin-styled-components";
 const styledComponentsTransformer = createStyledComponentsTransformer();
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 
 const webpackConfig = () => {
@@ -15,11 +16,10 @@ const webpackConfig = () => {
 		 * 	: {"devtool": "eval-source-map"},
 		 */
 		"entry": {
-			"code": "/src/index.tsx",
-			"styles": "/src/App.css"
+			"code": "./src/index.tsx"
 		},
 		"resolve": {
-			"extensions": [".ts", ".tsx", ".js", ".css"],
+			"extensions": [".ts", ".tsx", ".js", ".scss", ".css"],
 			"fallback": {"http": false},
 			"plugins": [
 				new TsconfigPathsPlugin({
@@ -29,8 +29,8 @@ const webpackConfig = () => {
 			]
 		},
 		"output": {
-			"path": path.join(__dirname, "/dist"),
-			"filename": "[name].js",
+			"path": path.join(__dirname, "./dist"),
+			"filename": "build.js",
 			"clean": true
 		},
 		"module": {
@@ -39,28 +39,21 @@ const webpackConfig = () => {
 					"test": /\.tsx?$/,
 					"loader": "ts-loader",
 					"options": {
-						"logInfoToStdOut": true,
-						"logLevel": "info",
 						"transpileOnly": true,
 						"getCustomTransformers": () => {
 							return {"before": [styledComponentsTransformer]};
 						}
 					}
-				}, {
-					"test": /\.css$/i,
+				}, {"test": /\.s[ac]ss$/i,
 					"use": [
-						"style-loader", "@teamsupercell/typings-for-css-modules-loader", {"loader": "css-loader",
-							"options": {
-								"modules": true
-							}}
-					]
-				}
+						"style-loader", {"loader": MiniCssExtractPlugin.loader,
+							"options": {"esModule": false}}, "css-loader", "sass-loader"
+					]}
 			]
 		},
 		"plugins": [
-			new HtmlWebpackPlugin({
-				"template": path.join(__dirname, "/public/index.html"),
-				"hash": true
+			new MiniCssExtractPlugin({"filename": "styles.css"}), new HtmlWebpackPlugin({
+				"template": path.join(__dirname, "/public/index.html")
 			}), new webpack.DefinePlugin({
 				// "process.env.PRODUCTION": env.production || !env.development
 			})

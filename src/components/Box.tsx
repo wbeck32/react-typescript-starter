@@ -10,7 +10,7 @@ const BigBox = styled.div`
 const Box:FunctionComponent = () => {
 
 	return (
-		<BigBox color="plum" bg="champagne">
+		<BigBox color="plum" bg="champagne" className="someClass">
 		Red box
 		</BigBox>
 	);
