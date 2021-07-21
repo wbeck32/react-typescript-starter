@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="12px" viewBox="0 0 16 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon/Chat/Fill/16</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-121.000000, -328.000000)" fill="#0071C4" fill-rule="nonzero">
+            <g id="Icon/Chat/Fill/16" transform="translate(121.000000, 328.000000)">
+                <path d="M10.7923208,11.750772 C10.403066,12.1400268 9.76465983,12.1327272 9.37955379,11.7476211 L7.63193268,10 L4.99668583,10 C2.23709245,10 0,7.75580481 0,5 C0,2.23857625 2.24157855,8.8817842e-15 4.99668583,8.8817842e-15 L11.0033142,8.8817842e-15 C13.7629076,8.8817842e-15 16,2.24419519 16,5 C16,7.07793887 14.7307318,8.85982134 12.9284965,9.61459625 L10.7923208,11.750772 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

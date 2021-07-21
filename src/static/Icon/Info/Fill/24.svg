@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon/Info/Fill/24</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-427.000000, -163.000000)" fill="#0071C4">
+            <g id="Icon/Info/Fill/24" transform="translate(427.000000, 163.000000)">
+                <path d="M11,0 C17.0751322,0 22,4.92486775 22,11 C22,17.0751322 17.0751322,22 11,22 C4.92486775,22 0,17.0751322 0,11 C0,4.92486775 4.92486775,0 11,0 Z M12.5,9.5 L9.5,9.5 L9.5,17 L12.5,17 L12.5,9.5 Z M11,5 C10.1715729,5 9.5,5.67157288 9.5,6.5 C9.5,7.32842712 10.1715729,8 11,8 C11.8284271,8 12.5,7.32842712 12.5,6.5 C12.5,5.67157288 11.8284271,5 11,5 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

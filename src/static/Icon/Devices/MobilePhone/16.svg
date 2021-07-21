@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="16px" viewBox="0 0 10 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon/Devices/MobilePhone/16</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-216.000000, -432.000000)" fill="#0071C4" fill-rule="nonzero">
+            <g id="Icon/Devices/MobilePhone/16" transform="translate(216.000000, 432.000000)">
+                <path d="M2,12 L8,12 L8,2 L2,2 L2,12 Z M9.00460243,0 C9.55434533,0 10,0.444630861 10,1.00087166 L10,14.9991283 C10,15.5518945 9.5443356,16 9.00460243,16 L0.995397568,16 C0.445654671,16 0,15.5553691 0,14.9991283 L0,1.00087166 C0,0.448105505 0.455664396,0 0.995397568,0 L9.00460243,0 Z M5,13 L4.88266744,13.0067277 C4.38272018,13.0644928 4,13.4871642 4,14 C4,14.5561352 4.44771525,15 5,15 L5,15 L5.11733256,14.9932723 C5.61727982,14.9355072 6,14.5128358 6,14 L6,14 L5.99327227,13.8826674 C5.93550716,13.3827202 5.51283584,13 5,13 L5,13 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

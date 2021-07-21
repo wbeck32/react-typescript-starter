@@ -19,7 +19,7 @@ const webpackConfig = () => {
 			"code": "./src/index.tsx"
 		},
 		"resolve": {
-			"extensions": [ ".ts", ".tsx", ".js", ".scss", ".css" ],
+			"extensions": [ ".ts", ".tsx", ".js" ],
 			"fallback": { "http": false },
 			"plugins": [
 				new TsconfigPathsPlugin({

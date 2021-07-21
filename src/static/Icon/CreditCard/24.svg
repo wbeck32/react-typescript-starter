@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="17px" viewBox="0 0 24 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon/CreditCard/24</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-340.000000, -432.000000)" fill="#0071C4" fill-rule="nonzero">
+            <g id="Icon/CreditCard/24" transform="translate(340.000000, 432.000000)">
+                <path d="M22.9993054,0 C23.5519738,0 24,0.454708934 24,0.999960201 L24,16.0000398 C24,16.5523026 23.5525308,17 22.9993054,17 L1.00069463,17 C0.448026248,17 0,16.5452911 0,16.0000398 L0,0.999960201 C0,0.447697432 0.44746922,0 1.00069463,0 L22.9993054,0 Z M22,7 L2,7 L2,15 L22,15 L22,7 Z M8,11 L8,13 L4,13 L4,11 L8,11 Z M16,11 L16,13 L10,13 L10,11 L16,11 Z M22,2 L2,2 L2,4 L22,4 L22,2 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

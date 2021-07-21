@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="17px" viewBox="0 0 10 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Caret/Left</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M12.7091115,5.70710678 L5.70911154,12.7071068 C5.31858724,13.0976311 4.68542227,13.0976311 4.29489797,12.7071068 L-2.70510203,5.70710678 C-3.33506689,5.07714192 -2.8889001,4 -1.99799525,4 L12.0020048,4 C12.8929096,4 13.3390764,5.07714192 12.7091115,5.70710678 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Caret/Left" fill="#0071C4" fill-rule="nonzero" transform="translate(5.002005, 8.500000) scale(1, -1) rotate(-270.000000) translate(-5.002005, -8.500000) " xlink:href="#path-1"></use>
+    </g>
+</svg>

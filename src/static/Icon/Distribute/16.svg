@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon/Distribute/16</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-28.000000, -488.000000)" fill="#0071C4">
+            <g id="Icon/Distribute/16" transform="translate(28.000000, 488.000000)">
+                <path d="M6.00064404,0.251869235 L6,10 L15.7480579,9.99963918 C14.8600978,13.4502767 11.7278088,16 8,16 C3.581722,16 1.15463195e-14,12.418278 1.15463195e-14,8 C1.15463195e-14,4.27208922 2.54986283,1.13973081 6.00064404,0.251869235 Z M8,1.0658141e-14 C12.3349143,1.0658141e-14 15.8645429,3.44783777 15.9961932,7.75082067 L16,8 L8,8 L8,1.0658141e-14 Z M10.0006859,2.34165389 L9.999,6 L13.6587023,6.00032181 C13.0562696,4.29557178 11.7052966,2.94438161 10.0006859,2.34165389 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

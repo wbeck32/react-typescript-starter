@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="16px" viewBox="0 0 14 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon/Calendar/16</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-478.000000, -326.000000)" fill="#0071C4">
+            <g id="Icon/Calendar/16" transform="translate(478.000000, 326.000000)">
+                <path d="M4,2 L4,0.997030139 C4,0.446385598 4.44386482,0 5,0 C5.55228475,0 6,0.453036308 6,0.997030139 L6,2 L8,2 L8,0.997030139 C8,0.446385598 8.44386482,0 9,0 C9.55228475,0 10,0.453036308 10,0.997030139 L10,2 L13.2223361,2 C13.651828,2 14,2.34606934 14,2.77766394 L14,15.2223361 C14,15.651828 13.6539307,16 13.2223361,16 L0.777663941,16 C0.348172006,16 0,15.6539307 0,15.2223361 L0,2.77766394 C0,2.34817201 0.346069336,2 0.777663941,2 L4,2 Z M4,4 L2,4 L2,6 L4,6 L4,4 L4,4 Z M6,4 L6,6 L8,6 L8,4 L6,4 L6,4 Z M10,4 L10,6 L12,6 L12,4 L10,4 Z M12,8 L2,8 L2,14 L12,14 L12,8 L12,8 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="9px" viewBox="0 0 16 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Caret/Down</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M15.7091115,1.70710678 L8.70911154,8.70710678 C8.31858724,9.09763107 7.68542227,9.09763107 7.29489797,8.70710678 L0.294897973,1.70710678 C-0.335066888,1.07714192 0.111099904,0 1.00200475,0 L15.0020048,0 C15.8929096,0 16.3390764,1.07714192 15.7091115,1.70710678 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Caret/Down" fill="#0071C4" fill-rule="nonzero" xlink:href="#path-1"></use>
+    </g>
+</svg>
