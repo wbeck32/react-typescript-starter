@@ -1,5 +1,6 @@
 {
 	"compilerOptions": {
+		"skipLibCheck":true,
 		"allowJs": true,
 		"allowSyntheticDefaultImports": true,
 		"baseUrl": "./",
@@ -37,5 +38,5 @@
 	"include": [
 		"./src",
 		"./webpack.config.ts"
-	]
+	],
 }
